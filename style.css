@@ -1,0 +1,103 @@
+/*made by Rushi*/
+
+body {
+    text-align: center;
+}
+.button {
+    border: none;
+    color: white;
+    padding: 32px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 8px 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.text {
+    border: none;
+    color: white;
+    padding: 32px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 8px 4px;
+    transition-duration: 0.4s;
+    cursor: default;
+}
+.input {
+    border: none;
+    padding: 32px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 8px 4px;
+    transition-duration: 0.4s;
+    cursor: text;
+}
+.input1:hover {
+    background-color: red;
+    color: white;
+}
+.input1 {
+    background-color: white;
+    color: black;
+    border: 4px solid red;
+}
+.input2:hover {
+    background-color: lightblue;
+    color: white;
+}
+.input2 {
+    background-color: white;
+    color: black;
+    border: 4px solid lightblue;
+}
+.text1:hover {
+    background-color: orange;
+    color: white;
+}
+.text1 {
+    background-color: white;
+    color: black;
+    border: 4px solid orange;
+}
+.text2:hover {
+    background-color: yellow;
+    color: white;
+}
+.text2 {
+    background-color: white;
+    color: black;
+    border: 4px solid yellow;
+}
+.button1 {
+    background-color: white;
+    color: black;
+    border: 4px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 4px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+ul {
+    font-size: 24px;
+}
+#gameoverpage {
+    font-size: 32px;
+}

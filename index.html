@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Chess Timer
+        </title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <script type="text/javascript" lang="javascript" src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id = "heading">
+        </div>
+        <div>
+            <form id = "inputform">
+                <ul class="text text1">
+                    <li>Enter time in minutes</li>
+                    <li>Minimum total time is 5min</li>
+                    <!--<li>If you don't want move time, give it a value of 0</li>-->
+                </ul>
+                <br>
+                <input class="input input1" type="number" placeholder="Total Time" autocomplete="on" required>
+                <!--<br>
+                <input class="input input2" type="number" placeholder="Each move Time" autocomplete="on" required>-->
+                <br>
+                <button class="button button1" onclick="func1()">Submit</button>
+            </form>
+        </div>
+        <div>
+        <div id="turn">
+        </div>
+        <div id="maingame">
+        </div>
+        <div id="but_main">
+        </div>
+        </div>
+    </body>
+    </html>
