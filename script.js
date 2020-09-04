@@ -1,12 +1,12 @@
+$(() => {
 //made by Rushi
 
-gameovernow = false;
+var gameovernow = false;
 
 // function if user presses submit button
-function func1(){
-    var x = document.getElementById("inputform");
-    var ttime;
-    ttime = x[0].value;
+$("#b1").on("click", event => {
+    event.preventDefault();
+    var ttime = $("#inputform").children().eq(0).val;
 
     // if user enters time less than 5 then reset
     if (ttime >= 5) {
@@ -15,29 +15,28 @@ function func1(){
     }
     else {
         alert("Total Time should be greater than 5 min.");
-        x.reset();
+        $("#inputform").reset();
     }
-}
+})
 
 // change page if 
 function func2(){
-    document.getElementById("inputform").innerHTML = "<button class='button button2' onclick='func3()'>start match</button>";
-}
-
-function func3() {
+    $("#inputform").html("<button class='button button2' id='b2'>start match</button>");
+    
+    $("b2").on("click", event => {
     window.tsecs1 = window.totaltime * 60;
     window.tsecs2 = window.totaltime * 60;
     window.player = 'white';
-    document.getElementById("heading").innerHTML = "<p class='text text1'>White</p><p class='text text2'>Black</p>";
-    document.getElementById("inputform").innerHTML = "";
-    document.getElementById("turn").classList = 'text button2';
-    document.getElementById("turn").innerHTML = "White's Turn";
+    $("#heading").html("<p class='text text1'>White</p><p class='text text2'>Black</p>");
+    $("#inputform").html("");
+    $("#turn").classList = 'text button2';
+    $("#turn").html("White's Turn");
     var tsec1 = window.tsecs1 % 60;
     var tmin1 = (window.tsecs1 - tsec1) / 60;
     var tsec2 = window.tsecs2 % 60;
     var tmin2 = (window.tsecs2 - tsec2) / 60;
-    document.getElementById("maingame").innerHTML = "<pre class='text text1' id = 't1'>    " + tmin1 + ":" + tsec1 + "    </pre><pre class='text text2' id = 1>    " + tmin2 + ":" + tsec2 + "    </pre>";
-    document.getElementById("but_main").innerHTML = "<button onclick='switchplayer()' class='button button1'>Shift Turn</button>";
+    $("#maingame").html("<pre class='text text1' id = 't1'>    " + tmin1 + ":" + tsec1 + "    </pre><pre class='text text2' id = 1>    " + tmin2 + ":" + tsec2 + "    </pre>");
+    $("#but_main").html("<button onclick='switchplayer()' class='button button1'>Shift Turn</button>");
     var idofvar = setInterval(() => {
         func4();
         if (window.gameovernow) {
@@ -45,6 +44,7 @@ function func3() {
             clearInterval(idofvar);
         }
     }, 1000);
+})
 }
 
 function switchplayer() {
@@ -79,3 +79,4 @@ function func4() {
     }
     document.getElementById("maingame").innerHTML = "<pre class='text text1' id = 't1'>    " + tmin1 + ":" + tsec1 + "    </pre><pre class='text text2' id = 1>    " + tmin2 + ":" + tsec2 + "    </pre>";
 }
+})
