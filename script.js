@@ -50,11 +50,11 @@ function func2(){
 function switchplayer() {
     if (window.player == 'white') {
         window.player = 'black';
-        document.getElementById("turn").innerHTML = "Black's Turn";
+        $("#turn").html("Black's Turn");
     }
     else {
         window.player = 'white';
-        document.getElementById("turn").innerHTML = "White's Turn";
+        $("#turn").html("White's Turn");
     }
 }
 
@@ -77,6 +77,6 @@ function func4() {
     if ((window.tsecs1 <= 0) || (window.tsecs2 <= 0)) {
         window.gameovernow = true;
     }
-    document.getElementById("maingame").innerHTML = "<pre class='text text1' id = 't1'>    " + tmin1 + ":" + tsec1 + "    </pre><pre class='text text2' id = 1>    " + tmin2 + ":" + tsec2 + "    </pre>";
+    $("#maingame").html("<pre class='text text1' id = 't1'>    " + tmin1 + ":" + tsec1 + "    </pre><pre class='text text2' id = 1>    " + tmin2 + ":" + tsec2 + "    </pre>");
 }
 })
